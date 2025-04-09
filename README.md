@@ -48,5 +48,21 @@ Then, open any of the .ipynb files and select the Python (venv) kernel to ensure
 Each notebook explores different aspects of LangGraph, including:
 
 - **Minimal chatbot** – The minimal chatbot that is able to remember previous messages.
+- **🐾 Pet Info chatbot** - This project is a minimal but complete example of building a multi-turn conversational agent with structured state using LangGraph. It guides a user through a short conversation to determine:
+  - whether they have a pet, 
+  - what kind of animal it is, 
+  - and the pet's name. 
+  
+  It demonstrates the following concepts:
+  - Tool calling with LangChain + LangGraph: the agent uses an explicit pet_info tool call on every turn to capture known information. 
+  - State management with multiple fields: the graph state tracks has_pet, animal, pet_name, and messages independently. 
+  - Graph architecture with multiple nodes:
+    - A node to get user input 
+    - A node to let the agent process and call the tool 
+    - A final node to summarize and end the conversation 
+  - Letting the agent drive the flow: the agent decides when the conversation is over based on known data (e.g. all fields filled or user has no pet). 
+  - Streaming execution: the LangGraph is run in streaming mode to simulate a real-time chatbot loop. 
+  - Clean return structure: after the conversation ends, the final dict contains the gathered information (or indicates the user has no pet).
+  This is a useful starting point for building more complex assistant flows that combine structured tool use with natural conversation.
 
 
