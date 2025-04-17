@@ -48,6 +48,8 @@ Then, open any of the .ipynb files and select the Python (venv) kernel to ensure
 Each notebook explores different aspects of LangGraph, including:
 
 - **Minimal chatbot** – The minimal chatbot that is able to remember previous messages.
+- **Minimal chatbot with longterm memory** - This extends the minimal chatbot by adding longterm memory. 
+Long conversations are supported via message summaries and truncation. User chats are persisted using sqlite.
 - **Minimal React Agent** - A minimal Agent to do basic arithmetic, uses tools_condition.
 - **🐾 Pet Info chatbot** - This project is an example of building a multi-turn conversational agent with structured state using LangGraph. It guides a user through a short conversation to determine:
   - whether they have a pet, 
